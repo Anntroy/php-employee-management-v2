@@ -34,7 +34,7 @@ CREATE TABLE employees (
 CREATE TABLE users (
     user_no      INT             NOT NULL AUTO_INCREMENT,
     user_name    VARCHAR(40)     NOT NULL UNIQUE,
-    user_password   VARCHAR(20)            NOT NULL,
+    user_password   VARCHAR(200)      NOT NULL,
     user_email   VARCHAR(40)             NOT NULL,
     PRIMARY KEY (user_no)
 );
@@ -50,5 +50,5 @@ INSERT INTO employees (employee_name, employee_last_name, employee_email, employ
 ('Robert', 'Thomson', 'rthomson@network.com', 'man', 'New Orleans', '24', 'LU','126',  '63281', '91232876454');
 
 
-INSERT INTO employees (user_name, user_password, user_email) VALUES
+INSERT INTO users (user_name, user_password, user_email) VALUES
 ('admin', '$2y$10$nuh1LEwFt7Q2/wz9/CmTJO91stTBS4cRjiJYBY3sVCARnllI.wzBC', 'admin@assemblerschool.com');
