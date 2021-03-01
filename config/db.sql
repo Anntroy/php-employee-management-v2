@@ -19,14 +19,14 @@ CREATE TABLE employees (
     emp_no      INT             NOT NULL AUTO_INCREMENT,
     employee_name  VARCHAR(14)     NOT NULL,
     employee_last_name  VARCHAR(16)     NOT NULL,
-    employee_email  VARCHAR(16)     NOT NULL,
+    employee_email  VARCHAR(40)     NOT NULL,
     employee_gender      ENUM ('man','woman')  NOT NULL,
     employee_city   VARCHAR(16)     NOT NULL,
     employee_street_address   VARCHAR(16)     NOT NULL,
     employee_state   VARCHAR(16)     NOT NULL,
     employee_age   INT      NOT NULL,
     employee_postal_code   INT      NOT NULL,
-    employee_phone_number   INT      NOT NULL,
+    employee_phone_number  VARCHAR(40)      NOT NULL,
     PRIMARY KEY (emp_no)
 );
 
@@ -43,11 +43,11 @@ INSERT INTO employees (employee_name, employee_last_name, employee_email, employ
 ('Rack', 'Lei', 'jackon@network.com', 'man', 'San', '126', 'CA', '24', '394221', '7383627627'),
 ('John', 'Doe', 'jhondoe@foo.com', 'man', 'New York', '89', 'WA', '34', '09889', '1283645645'),
 ('Leila', 'Mills', 'mills@leila.com', 'woman', 'San Diego', '55', 'CA', '29', '098765', '9983632461'),
-('Richard', 'dismond@foo.com', 'man', '30', '90', 'Salt lake city', 'UT', '457320', '90876987654'),
-('Susan', 'Smith', 'susanmith@baz.com', 'woman', '28', '43', 'Louisville', 'KNT', '445321', '224355488976'),
-('Brad', 'Simpson', 'brad@foo.com', 'man', '40', '128', 'Atlanta', 'GEO', '394221', '6854634522'),
-('Neil', 'Walker', 'walkerneil@baz.com', 'man', '42', '1', 'Nashville', 'TN', '90143', '45372788192'),
-('Robert', 'Thomson', 'rthomson@network.com', 'man', '24', '126', 'New Orleans', 'LU', '63281', '91232876454');
+('Richard', 'Desmond', 'dismond@foo.com', 'man', 'Salt lake city', '30', 'UT', '90', '457320', '90876987654'),
+('Susan', 'Smith', 'susanmith@baz.com', 'woman', 'Louisville', '28',  'KNT', '43', '445321', '224355488976'),
+('Brad', 'Simpson', 'brad@foo.com', 'man', 'Atlanta', '40', 'GEO','128', '394221', '6854634522'),
+('Neil', 'Walker', 'walkerneil@baz.com',  'man', 'Nashville','42','TN', '1',  '90143', '45372788192'),
+('Robert', 'Thomson', 'rthomson@network.com', 'man', 'New Orleans', '24', 'LU','126',  '63281', '91232876454');
 
 
 INSERT INTO employees (user_name, user_password, user_email) VALUES
