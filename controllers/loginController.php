@@ -7,7 +7,9 @@ class Login extends Controller {
     }
   public function login($params)
   {
-    $this->view->render('login/login');
+    // $this->view->render('login/login');
+    echo "Login method: " . $params;
+
   }
   public function datos($params)
   {
