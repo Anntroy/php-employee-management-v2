@@ -23,7 +23,7 @@
 const init = document.getElementById('index');
 
 init.addEventListener('click', ()=>{
-    window.location = '/php-employee-management-v1/assets/html/header.html'
+    window.location = '/php-employee-management-v2/assets/html/header.html'
 })
 
 
@@ -36,7 +36,7 @@ employeeForm.addEventListener('submit', e => updateEmployee(e));
 
 employeeForm.addEventListener('reset', (e) => {
     e.preventDefault();
-    window.location.assign('/php-employee-management-v1');
+    window.location.assign('/php-employee-management-v2');
 })
 
 async function updateEmployee(e) {
@@ -44,7 +44,7 @@ async function updateEmployee(e) {
     const formdata = new FormData(employeeForm);
     formdata.append("id", window.location.search.substr(-1,1));
     const response = await axios({
-        url: '/php-employee-management-v1/src/employee.php',
+        url: '/php-employee-management-v2/src/employee.php',
         method: 'POST',
         data: formdata
     });
