@@ -1,18 +1,16 @@
 <?php
 
-class Login extends Controller {
+class Login extends Controller
+{
 
-  function __construct(){
-      parent::__construct();
-    }
-  public function login($params)
+  function __construct()
   {
-    // $this->view->render('login/login');
-    echo "Login method: " . $params;
-
+    parent::__construct();
   }
-  public function datos($params)
+
+  function login()
   {
-    echo "Dato recibido: " . $params;
+    $data['login_error'] = "Incorrect credentials";
+    $this->view->getView($this, 'login', $data);
   }
 }
