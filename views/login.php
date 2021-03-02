@@ -1,3 +1,6 @@
+
+<?php require_once("./config/constants.php"); ?>
+<?= BASE_PATH ?>
 <!DOCTYPE html>
 <html lang="en">
 

@@ -1,6 +1,5 @@
 <?php
-
-require "config/config.php";
+require_once("./config/db.php");
 
 class Database
 {
@@ -9,18 +8,25 @@ class Database
 
   public function __construct()
   {
-    $connection = "mysql:host=" . DB_HOST . ";dbname=" . DB . ";charset=" . DB_CHARSET;
-    try {
+  }
 
-      $this->connect = new PDO($connection, DB_USER, DB_PASSWORD);
-      $this->connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  function connect()
+  {
+    try {
+      $connection = 'mysql:host=localhost;dbname=Employee_Management;user=root;password=Assembler;port=3306';
+      $options = [
+        PDO::ATTR_ERRMODE           =>  PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_EMULATE_PREPARES  => FALSE,
+      ];
+
+      $this->connect = new PDO($connection, "root", "Assembler", $options);
+
     } catch (PDOException $e) {
       print_r('Error connection: ' . $e->getMessage());
     }
   }
 
-  function connect()
-  {
+  function getConnect(){
     return $this->connect;
   }
 }
