@@ -5,7 +5,7 @@ include_once('./src/library/sessionHelper.php');
 // unset($_SESSION['userId']);
 
 if (!isset($_SESSION['userId'])) {
-  include_once('./src/login.php');
+  // include_once('./src/login.php');
 } else {
   include_once('./src/dashboard.php');
 }
